@@ -1,0 +1,6 @@
+framework module Pods_RunneriOSFrontendTests {
+  umbrella header "Pods-RunneriOSFrontendTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
