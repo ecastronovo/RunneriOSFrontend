@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29D225A7068003AAEF8 /* LoginViewController.swift */; };
 		9510A2A0225A725F003AAEF8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29F225A725F003AAEF8 /* RegisterViewController.swift */; };
+		959C1243225ABB9600CCCDA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */; };
 		95BC70A2225309C900D3C520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC70A1225309C800D3C520 /* AppDelegate.swift */; };
 		95BC70A4225309C900D3C520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC70A3225309C900D3C520 /* ViewController.swift */; };
 		95BC70A7225309C900D3C520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC70A5225309C900D3C520 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		8696DAAEE2B18D14B4242792 /* Pods-RunneriOSFrontendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunneriOSFrontendTests.release.xcconfig"; path = "Target Support Files/Pods-RunneriOSFrontendTests/Pods-RunneriOSFrontendTests.release.xcconfig"; sourceTree = "<group>"; };
 		9510A29D225A7068003AAEF8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9510A29F225A725F003AAEF8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Assets.xcassets/RegisterViewController.swift; sourceTree = "<group>"; };
+		959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95BC709E225309C800D3C520 /* RunneriOSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunneriOSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BC70A1225309C800D3C520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BC70A3225309C900D3C520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				95BC70A3225309C900D3C520 /* ViewController.swift */,
 				95BC70A5225309C900D3C520 /* Main.storyboard */,
 				9510A29F225A725F003AAEF8 /* RegisterViewController.swift */,
+				959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */,
 				95BC70A8225309CB00D3C520 /* Assets.xcassets */,
 				95BC70AA225309CB00D3C520 /* LaunchScreen.storyboard */,
 				95BC70AD225309CB00D3C520 /* Info.plist */,
@@ -385,6 +388,7 @@
 			files = (
 				9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */,
 				95BC70A4225309C900D3C520 /* ViewController.swift in Sources */,
+				959C1243225ABB9600CCCDA9 /* ProfileViewController.swift in Sources */,
 				95BC70A2225309C900D3C520 /* AppDelegate.swift in Sources */,
 				9510A2A0225A725F003AAEF8 /* RegisterViewController.swift in Sources */,
 			);
