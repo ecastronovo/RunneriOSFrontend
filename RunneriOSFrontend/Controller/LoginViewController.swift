@@ -10,8 +10,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var login: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        login.layer.cornerRadius = 15
+        login.clipsToBounds = true
 
         // Do any additional setup after loading the view.
     }

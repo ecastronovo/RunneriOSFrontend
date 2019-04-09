@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -223,7 +224,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIr-6y-iCS">
-                                <rect key="frame" x="57" y="20" width="260" height="30"/>
+                                <rect key="frame" x="57" y="220" width="260" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="GfE-RI-Ep9"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="JnD-nV-Khv"/>
@@ -235,7 +236,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-La-oP2">
-                                <rect key="frame" x="57" y="58" width="260" height="30"/>
+                                <rect key="frame" x="57" y="258" width="260" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="0Uh-L3-Bfp"/>
                                     <constraint firstAttribute="height" constant="30" id="tNe-Yh-uuD"/>
@@ -245,7 +246,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-bi-eAc">
-                                <rect key="frame" x="142" y="128" width="90" height="30"/>
+                                <rect key="frame" x="142" y="328" width="90" height="30"/>
                                 <color key="backgroundColor" red="0.62745098039215685" green="0.20784313725490194" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.20000000000000001" y="0.0" width="1" height="1"/>
                                 <constraints>
@@ -259,7 +260,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcy-2F-vVN">
-                                <rect key="frame" x="92" y="166" width="191" height="48"/>
+                                <rect key="frame" x="92" y="366" width="191" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="Y2J-Zg-swZ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="ghO-uV-v8p"/>
@@ -271,7 +272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpk-Ja-vFD">
-                                <rect key="frame" x="81" y="222" width="212" height="30"/>
+                                <rect key="frame" x="81" y="422" width="212" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="ARJ-u9-91d"/>
                                     <constraint firstAttribute="height" constant="30" id="PXF-TT-spT"/>
@@ -281,22 +282,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Forgot Password"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oU5-re-Hzy">
+                                <rect key="frame" x="67" y="52" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="QKQ-eG-aPD"/>
+                                    <constraint firstAttribute="width" secondItem="oU5-re-Hzy" secondAttribute="height" multiplier="15:8" id="dwZ-v9-A4k"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vcy-2F-vVN" firstAttribute="top" secondItem="bZe-La-oP2" secondAttribute="bottom" constant="78" id="2UK-US-bFu"/>
-                            <constraint firstItem="EIr-6y-iCS" firstAttribute="top" secondItem="6zC-Uk-zVM" secondAttribute="top" id="5zY-yG-6Ck"/>
                             <constraint firstItem="5Kg-bi-eAc" firstAttribute="top" secondItem="bZe-La-oP2" secondAttribute="bottom" constant="40" id="6ia-5z-smu"/>
                             <constraint firstItem="EIr-6y-iCS" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="81V-xU-iEn"/>
+                            <constraint firstItem="EIr-6y-iCS" firstAttribute="top" secondItem="6zC-Uk-zVM" secondAttribute="top" constant="200" id="Bhx-p2-dZy"/>
+                            <constraint firstItem="oU5-re-Hzy" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="HMb-2M-aT2"/>
+                            <constraint firstItem="oU5-re-Hzy" firstAttribute="top" secondItem="6zC-Uk-zVM" secondAttribute="top" constant="32" id="OCK-Ua-Ngm"/>
                             <constraint firstItem="5Kg-bi-eAc" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="Q1u-1U-Scu"/>
                             <constraint firstItem="5Kg-bi-eAc" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="RDF-RP-7Lx"/>
                             <constraint firstItem="bZe-La-oP2" firstAttribute="top" secondItem="EIr-6y-iCS" secondAttribute="bottom" constant="8" id="Xf0-0Z-jIQ"/>
                             <constraint firstItem="Wpk-Ja-vFD" firstAttribute="leading" secondItem="6zC-Uk-zVM" secondAttribute="leading" constant="81" id="Ykd-Z7-FB7"/>
                             <constraint firstItem="vcy-2F-vVN" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="ZRP-Lq-BgG"/>
                             <constraint firstItem="vcy-2F-vVN" firstAttribute="top" secondItem="bZe-La-oP2" secondAttribute="bottom" constant="78" id="ZWL-Wf-9GF"/>
+                            <constraint firstItem="EIr-6y-iCS" firstAttribute="top" secondItem="oU5-re-Hzy" secondAttribute="bottom" constant="40" id="cXO-lb-ihD"/>
                             <constraint firstItem="5Kg-bi-eAc" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="ckm-Ct-dmP"/>
                             <constraint firstItem="bZe-La-oP2" firstAttribute="top" secondItem="EIr-6y-iCS" secondAttribute="bottom" constant="8" id="h1S-KZ-ahV"/>
-                            <constraint firstItem="EIr-6y-iCS" firstAttribute="top" secondItem="6zC-Uk-zVM" secondAttribute="top" id="naD-HN-jHp"/>
                             <constraint firstItem="vcy-2F-vVN" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="pqq-8u-tEi"/>
                             <constraint firstItem="Wpk-Ja-vFD" firstAttribute="top" secondItem="5Kg-bi-eAc" secondAttribute="bottom" constant="64" id="q0l-KT-GKg"/>
                             <constraint firstItem="bZe-La-oP2" firstAttribute="centerX" secondItem="GP9-ZU-cQ6" secondAttribute="centerX" id="rX1-NK-cK4"/>
@@ -305,6 +315,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6zC-Uk-zVM"/>
                     </view>
+                    <connections>
+                        <outlet property="login" destination="5Kg-bi-eAc" id="LrL-Ck-aTE"/>
+                        <outlet property="logo" destination="oU5-re-Hzy" id="DXE-EC-FAy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKd-dt-CQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
