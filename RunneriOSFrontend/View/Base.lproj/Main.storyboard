@@ -176,12 +176,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-Ce-tQI">
-                                <rect key="frame" x="67" y="52" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="QFW-zi-AbD"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHj-VS-yXo">
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
                                 <constraints>
@@ -193,6 +187,13 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="aVU-Sc-lZs"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Runner_TransBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-Ce-tQI">
+                                <rect key="frame" x="123" y="52" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="V07-fS-dfP"/>
+                                    <constraint firstAttribute="height" constant="128" id="noR-Po-pmq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -795,6 +796,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="pDB-Q2-90k"/>
         <segue reference="fTM-2I-BkK"/>
-        <segue reference="j7s-7J-IJw"/>
+        <segue reference="aVU-Sc-lZs"/>
     </inferredMetricsTieBreakers>
 </document>
