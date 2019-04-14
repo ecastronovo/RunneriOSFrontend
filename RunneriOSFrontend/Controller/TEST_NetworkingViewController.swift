@@ -13,6 +13,10 @@ import UIKit
 
 class TEST_NetworkingViewController: UIViewController {
     
+
+    
+//    @IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textField: UITextField!
     private let networkingClient = NetworkingClient()
@@ -22,8 +26,10 @@ class TEST_NetworkingViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func executeRequest(_ sender: Any) {
-        
+    
+    
+    @IBAction func fetchRequest(_ sender: Any) {
+        //USE 127.0.0.1/tasks too pull list of tasks from Django Webserver
         guard let urlToExecute = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
             return
         }
@@ -38,6 +44,7 @@ class TEST_NetworkingViewController: UIViewController {
     }
     
     @IBAction func executeSpecificRequest(_ sender: Any) {
+        //USE 127.0.0.1/tasks too pull list of tasks from Django Webserver
         guard let urlToExecute = URL(string: "https://jsonplaceholder.typicode.com/posts" + "/" + textField.text!) else {
             return
         }
