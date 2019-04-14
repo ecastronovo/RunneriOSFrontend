@@ -22,6 +22,7 @@
 		95BC70C2225309CB00D3C520 /* RunneriOSFrontendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC70C1225309CB00D3C520 /* RunneriOSFrontendUITests.swift */; };
 		95D70B11225FDCEC00A3705C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D70B10225FDCEC00A3705C /* TaskTableViewCell.swift */; };
 		95E3A3152262F7E100877538 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3A3142262F7E100877538 /* CreateTaskViewController.swift */; };
+		95EBE91E2263AE3F0046CD51 /* DarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EBE91D2263AE3F0046CD51 /* DarkButton.swift */; };
 		C566BEF6A1A6F265D13757DE /* Pods_RunneriOSFrontendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D70EEA03E179A2B020A2F30 /* Pods_RunneriOSFrontendUITests.framework */; };
 		DD49BCCBFDCCB6C6BC8811B1 /* Pods_RunneriOSFrontend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77F6B3E13E1375D0AEE1664 /* Pods_RunneriOSFrontend.framework */; };
 		E32000B86D45CAD3A8036CF3 /* Pods_RunneriOSFrontendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27754D64D99D4E68DB027A9 /* Pods_RunneriOSFrontendTests.framework */; };
@@ -71,6 +72,7 @@
 		95BC70C3225309CB00D3C520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D70B10225FDCEC00A3705C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		95E3A3142262F7E100877538 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		95EBE91D2263AE3F0046CD51 /* DarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButton.swift; sourceTree = "<group>"; };
 		A27754D64D99D4E68DB027A9 /* Pods_RunneriOSFrontendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunneriOSFrontendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C886FACC42851C34BCFE6EAD /* Pods-RunneriOSFrontendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunneriOSFrontendUITests.debug.xcconfig"; path = "Target Support Files/Pods-RunneriOSFrontendUITests/Pods-RunneriOSFrontendUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0C61AC1ACC949CBD7C25D25 /* Pods-RunneriOSFrontendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunneriOSFrontendTests.debug.xcconfig"; path = "Target Support Files/Pods-RunneriOSFrontendTests/Pods-RunneriOSFrontendTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		950CCFB1225C3F99000D6A25 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				95EBE91D2263AE3F0046CD51 /* DarkButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95172D712263A1A7008B63E2 /* TEST_NetworkingViewController.swift in Sources */,
+				95EBE91E2263AE3F0046CD51 /* DarkButton.swift in Sources */,
 				95D70B11225FDCEC00A3705C /* TaskTableViewCell.swift in Sources */,
 				9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */,
 				95172D6F2263A078008B63E2 /* NetworkingClient.swift in Sources */,
