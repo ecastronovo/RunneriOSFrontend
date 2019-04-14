@@ -431,7 +431,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irP-qr-y2L">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irP-qr-y2L" customClass="DarkButton" customModule="RunneriOSFrontend" customModuleProvider="target">
                                 <rect key="frame" x="146.5" y="75" width="81" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xpk-8Z-ZxN"/>
@@ -534,6 +534,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7qX-JU-cG6"/>
                     <connections>
+                        <outlet property="MainTaskFeed" destination="YLA-9a-0ZL" id="YU3-s4-tEj"/>
                         <outlet property="allTasks" destination="YLA-9a-0ZL" id="7AR-PU-wah"/>
                     </connections>
                 </viewController>

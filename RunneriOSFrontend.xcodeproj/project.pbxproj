@@ -11,6 +11,7 @@
 		9510A2A0225A725F003AAEF8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29F225A725F003AAEF8 /* RegisterViewController.swift */; };
 		95172D6F2263A078008B63E2 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95172D6E2263A078008B63E2 /* NetworkingClient.swift */; };
 		95172D712263A1A7008B63E2 /* TEST_NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95172D702263A1A7008B63E2 /* TEST_NetworkingViewController.swift */; };
+		9522D0282263D83D00B00CF9 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522D0272263D83D00B00CF9 /* LightButton.swift */; };
 		9572C805225ADD250071B3DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9572C804225ADD250071B3DE /* MainViewController.swift */; };
 		959C1243225ABB9600CCCDA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */; };
 		95BC70A2225309C900D3C520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC70A1225309C800D3C520 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		9510A29F225A725F003AAEF8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		95172D6E2263A078008B63E2 /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 		95172D702263A1A7008B63E2 /* TEST_NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST_NetworkingViewController.swift; sourceTree = "<group>"; };
+		9522D0272263D83D00B00CF9 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		9572C804225ADD250071B3DE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95BC709E225309C800D3C520 /* RunneriOSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunneriOSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 		950CCFB1225C3F99000D6A25 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9522D0272263D83D00B00CF9 /* LightButton.swift */,
 				95EBE91D2263AE3F0046CD51 /* DarkButton.swift */,
 			);
 			path = Utils;
@@ -436,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9522D0282263D83D00B00CF9 /* LightButton.swift in Sources */,
 				95172D712263A1A7008B63E2 /* TEST_NetworkingViewController.swift in Sources */,
 				95EBE91E2263AE3F0046CD51 /* DarkButton.swift in Sources */,
 				95D70B11225FDCEC00A3705C /* TaskTableViewCell.swift in Sources */,
