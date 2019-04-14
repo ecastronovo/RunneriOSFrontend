@@ -28,7 +28,7 @@ class DarkButton: UIButton {
         
         backgroundColor      = UIColor.blue
         titleLabel?.font     = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        layer.cornerRadius   = 25
+        layer.cornerRadius   = 15
         layer.borderWidth    = 3.0
         layer.borderColor    = UIColor.darkGray.cgColor
         
