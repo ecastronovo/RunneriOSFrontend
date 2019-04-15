@@ -17,12 +17,28 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func sign_in(_ sender: Any) {
+        if !anyInputErrors(){
         let alertController = UIAlertController(title: "Sign-in", message:
             "Username: \(username.text!)", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
         
         self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func anyInputErrors() -> Bool {
+        let str = username.text
+        if str!.isEmpty {
+            let alertController = UIAlertController(title: "Error", message:
+                "Invalid Username: \(username.text!)", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
         
+        
+        
+        return true
     }
     
     override func viewDidLoad() {
