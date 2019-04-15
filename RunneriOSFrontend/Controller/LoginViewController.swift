@@ -12,6 +12,18 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
+    
+    @IBAction func sign_in(_ sender: Any) {
+        let alertController = UIAlertController(title: "Sign-in", message:
+            "Username: \(username.text!)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

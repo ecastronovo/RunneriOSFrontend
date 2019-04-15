@@ -415,6 +415,9 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="sign_in:" destination="3Fe-8T-sSZ" eventType="touchUpInside" id="Jct-1x-UHi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcy-2F-vVN">
                                 <rect key="frame" x="92" y="366" width="191" height="48"/>
@@ -489,6 +492,8 @@
                     <connections>
                         <outlet property="login" destination="5Kg-bi-eAc" id="LrL-Ck-aTE"/>
                         <outlet property="logo" destination="oU5-re-Hzy" id="DXE-EC-FAy"/>
+                        <outlet property="password" destination="bZe-La-oP2" id="Kfs-Vt-ccI"/>
+                        <outlet property="username" destination="EIr-6y-iCS" id="E7e-wx-ONh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKd-dt-CQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -796,6 +801,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="pDB-Q2-90k"/>
         <segue reference="fTM-2I-BkK"/>
-        <segue reference="aVU-Sc-lZs"/>
+        <segue reference="j7s-7J-IJw"/>
     </inferredMetricsTieBreakers>
 </document>
