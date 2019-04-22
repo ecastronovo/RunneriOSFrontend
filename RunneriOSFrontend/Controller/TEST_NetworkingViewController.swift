@@ -29,8 +29,8 @@ class TEST_NetworkingViewController: UIViewController {
     
     
     @IBAction func fetchRequest(_ sender: Any) {
-        //USE 127.0.0.1/tasks too pull list of tasks from Django Webserver
-        guard let urlToExecute = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
+        //USE 127.0.0.1/task too pull list of tasks from Django Webserver
+        guard let urlToExecute = URL(string: "127.0.0.1/task") else {
             return
         }
         

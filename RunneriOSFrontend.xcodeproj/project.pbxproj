@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29D225A7068003AAEF8 /* LoginViewController.swift */; };
 		9510A2A0225A725F003AAEF8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29F225A725F003AAEF8 /* RegisterViewController.swift */; };
-		95172D6F2263A078008B63E2 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95172D6E2263A078008B63E2 /* NetworkingClient.swift */; };
-		95172D712263A1A7008B63E2 /* TEST_NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95172D702263A1A7008B63E2 /* TEST_NetworkingViewController.swift */; };
 		9522D0282263D83D00B00CF9 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522D0272263D83D00B00CF9 /* LightButton.swift */; };
 		953E45BC2264EA360026A3C4 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E45BB2264EA360026A3C4 /* MainTableViewController.swift */; };
 		953E45BE2264EC2B0026A3C4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E45BD2264EC2B0026A3C4 /* Task.swift */; };
+		955DFC02226E49FA00C9ED85 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DFC01226E49FA00C9ED85 /* NetworkTests.swift */; };
 		9572C805225ADD250071B3DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9572C804225ADD250071B3DE /* MainViewController.swift */; };
 		959C1243225ABB9600CCCDA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */; };
+		95A595CF226970FF00EC4AEE /* MainpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A595CE226970FF00EC4AEE /* MainpageViewController.swift */; };
+		95A595D12269731900EC4AEE /* TaskMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A595D02269731900EC4AEE /* TaskMainTableViewCell.swift */; };
 		95BC70A2225309C900D3C520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC70A1225309C800D3C520 /* AppDelegate.swift */; };
 		95BC70A4225309C900D3C520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC70A3225309C900D3C520 /* ViewController.swift */; };
 		95BC70A7225309C900D3C520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC70A5225309C900D3C520 /* Main.storyboard */; };
@@ -56,13 +57,14 @@
 		8696DAAEE2B18D14B4242792 /* Pods-RunneriOSFrontendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunneriOSFrontendTests.release.xcconfig"; path = "Target Support Files/Pods-RunneriOSFrontendTests/Pods-RunneriOSFrontendTests.release.xcconfig"; sourceTree = "<group>"; };
 		9510A29D225A7068003AAEF8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9510A29F225A725F003AAEF8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		95172D6E2263A078008B63E2 /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
-		95172D702263A1A7008B63E2 /* TEST_NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEST_NetworkingViewController.swift; sourceTree = "<group>"; };
 		9522D0272263D83D00B00CF9 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		953E45BB2264EA360026A3C4 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		953E45BD2264EC2B0026A3C4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		955DFC01226E49FA00C9ED85 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		9572C804225ADD250071B3DE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		95A595CE226970FF00EC4AEE /* MainpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainpageViewController.swift; sourceTree = "<group>"; };
+		95A595D02269731900EC4AEE /* TaskMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMainTableViewCell.swift; sourceTree = "<group>"; };
 		95BC709E225309C800D3C520 /* RunneriOSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunneriOSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BC70A1225309C800D3C520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BC70A3225309C900D3C520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				953E45BB2264EA360026A3C4 /* MainTableViewController.swift */,
-				95172D702263A1A7008B63E2 /* TEST_NetworkingViewController.swift */,
 				95E3A3142262F7E100877538 /* CreateTaskViewController.swift */,
 				9510A29D225A7068003AAEF8 /* LoginViewController.swift */,
 				9510A29F225A725F003AAEF8 /* RegisterViewController.swift */,
@@ -135,6 +136,9 @@
 				9572C804225ADD250071B3DE /* MainViewController.swift */,
 				95D70B10225FDCEC00A3705C /* TaskTableViewCell.swift */,
 				95BC70A3225309C900D3C520 /* ViewController.swift */,
+				95A595CE226970FF00EC4AEE /* MainpageViewController.swift */,
+				95BC70AA225309CB00D3C520 /* LaunchScreen.storyboard */,
+				95BC70A5225309C900D3C520 /* Main.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -142,8 +146,7 @@
 		950CCFAF225C3F90000D6A25 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				95BC70AA225309CB00D3C520 /* LaunchScreen.storyboard */,
-				95BC70A5225309C900D3C520 /* Main.storyboard */,
+				95A595D02269731900EC4AEE /* TaskMainTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				953E45BD2264EC2B0026A3C4 /* Task.swift */,
-				95172D6E2263A078008B63E2 /* NetworkingClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +209,7 @@
 			children = (
 				95BC70B6225309CB00D3C520 /* RunneriOSFrontendTests.swift */,
 				95BC70B8225309CB00D3C520 /* Info.plist */,
+				955DFC01226E49FA00C9ED85 /* NetworkTests.swift */,
 			);
 			path = RunneriOSFrontendTests;
 			sourceTree = "<group>";
@@ -446,12 +449,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9522D0282263D83D00B00CF9 /* LightButton.swift in Sources */,
+				95A595D12269731900EC4AEE /* TaskMainTableViewCell.swift in Sources */,
+				95A595CF226970FF00EC4AEE /* MainpageViewController.swift in Sources */,
 				953E45BC2264EA360026A3C4 /* MainTableViewController.swift in Sources */,
-				95172D712263A1A7008B63E2 /* TEST_NetworkingViewController.swift in Sources */,
 				95EBE91E2263AE3F0046CD51 /* DarkButton.swift in Sources */,
 				95D70B11225FDCEC00A3705C /* TaskTableViewCell.swift in Sources */,
 				9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */,
-				95172D6F2263A078008B63E2 /* NetworkingClient.swift in Sources */,
 				95BC70A4225309C900D3C520 /* ViewController.swift in Sources */,
 				959C1243225ABB9600CCCDA9 /* ProfileViewController.swift in Sources */,
 				9572C805225ADD250071B3DE /* MainViewController.swift in Sources */,
@@ -466,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955DFC02226E49FA00C9ED85 /* NetworkTests.swift in Sources */,
 				95BC70B7225309CB00D3C520 /* RunneriOSFrontendTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

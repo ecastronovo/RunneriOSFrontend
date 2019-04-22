@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -24,8 +25,60 @@ class LoginViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
         }
+        
+        let parameters: Parameters =  [
+//            "username": "Dimple",
+//            "password": "dimple"
+            "username": "\(username.text!)",
+            "password": "\(password.text!)"
+        ]
+        //https://stackoverflow.com/questions/35472917/alamofire-header-parameters
+        // store auth token
+        
+        // MARK: Pull Main Page 
+//        Alamofire.request("http://localhost:8000/task/").responseJSON { (response) in
+//            let result = response.result
+//            print(response)
+//            print(result)
+//        }
+        Alamofire.request("http://localhost:8000/api-token-auth/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { (response) in
+                print(response)
+                 //print(response.response!.statusCode)
+//                responseCode = response.response!.statusCode
+//                print(responseCode)
+                let result = response.result
+                let responseCode = (response.response!.statusCode)
+                if responseCode == 200 {
+                    print("Going to Main")
+                    self.goToMain()
+                }
+                else {
+                    print("Not Going to Main")
+                    self.badLogin()
+                }
+            
+        }
     }
     
+    private func goToMain(){
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainpageViewController") as? MainpageViewController else {
+            return
+        }
+        present(destinationViewController, animated: true, completion: nil)
+        
+    }
+    private func badLogin(){
+        
+        let alertController = UIAlertController(title: "Sign-in", message:
+            "Invalid Username or Password", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
     func anyInputErrors() -> Bool {
         let str = username.text
         if str!.isEmpty {
