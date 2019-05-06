@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var taskTitle: UILabel!
@@ -16,8 +17,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var taskCreator: UILabel!
     @IBOutlet weak var taskReward: UILabel!
     @IBAction func taskRun(_ sender: UIButton) {
-        
+        runATask()
     }
+    
+    var currentTask: Task!
+    
+    
+    
+    
     
     var task_title: String?
     var task_description: String?
@@ -25,6 +32,41 @@ class DetailViewController: UIViewController {
     var task_complete_date: String?
     var task_creator: String?
     var task_reward: Double?
+    
+    private func runATask() -> Bool {
+        
+        let parameters: Parameters = [
+            "TaskTitle": currentTask.getTaskName,
+            "Description": currentTask.getDescription,
+            "Reward": currentTask.getReward,
+            "DateOfCompletion": "2019-04-18",
+            "TimeOfCompletion": "00:00:00",
+            "Addr1": currentTask.getAddr1,
+            "City" : currentTask.getCity,
+            "State" : currentTask.getState,
+            "PostalCode" : currentTask.getPostalCode,
+            "TaskType": "Moving",
+            "TaskStatus": "Running",
+            "RunnerFK": "2",
+            "AuthorFK": "7"
+        ]
+        
+        //runner fk and Taskstatus to change
+        
+        
+        Alamofire.request("http://127.0.0.1:8000/task/", method: .put, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { (response) in
+                print(response)
+                print(response.response!.statusCode)
+                //                responseCode = response.response!.statusCode
+                //                print(responseCode)
+                let result = response.result
+                // TODO: On completion handler
+        }
+        
+        return true
+        
+    }
     
 
     override func viewDidLoad() {
@@ -39,6 +81,8 @@ class DetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

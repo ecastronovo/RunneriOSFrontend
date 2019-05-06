@@ -135,6 +135,7 @@ extension MainpageViewController:UITableViewDelegate, UITableViewDataSource{
         vc?.task_complete_date  = tasksList[index].getDateOfCompletion
         vc?.task_creator  = tasksList[index].getAuthorFK
         vc?.task_reward  = tasksList[index].getReward
+        vc?.currentTask = tasksList[index]
         //NavMainController
          self.navigationController?.pushViewController(vc!, animated: true)
          //present(vc!, animated: true, completion: nil)
