@@ -62,7 +62,7 @@ class Task {
 //    },
     
     init(dict: Dictionary<String, AnyObject>) {
-        print("Task Initializer Called")
+        //print("Task Initializer Called")
         if let taskName = dict["TaskTitle"] as? String {
             self.taskName = taskName
         }

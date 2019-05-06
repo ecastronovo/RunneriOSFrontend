@@ -10,8 +10,51 @@ import UIKit
 import Alamofire
 
 class MainpageViewController: UIViewController {
+    let transition = SlideTransition()
 
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func didTapMenu(_ sender: UIButton) {
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {return}
+            menuViewController.didTapMenuType = {menuType in
+            print(menuType)
+            self.transitionToNew(menuType)
+        }
+        menuViewController.modalPresentationStyle = .overCurrentContext
+        menuViewController.transitioningDelegate = self
+        present(menuViewController, animated: true)
+    }
+    
+    func transitionToNew(_ menuType: MenuType){
+//        home
+//        profile
+//        mytasks
+//        logout
+        
+        switch menuType {
+        case .profile:
+            guard let next = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") else {return}
+            present(next, animated: true)
+            print("profile")
+        case .home:
+            guard let next = storyboard?.instantiateViewController(withIdentifier: "MainpageViewController") else {return}
+            present(next, animated: true)
+            print("home")
+        case .mytasks:
+//            guard let next = storyboard?.instantiateViewController(withIdentifier: "next") else {return}
+//            present(next, animated: true)
+            print("mytasks")
+        case .logout:
+//            guard let next = storyboard?.instantiateViewController(withIdentifier: "next") else {return}
+//            present(next, animated: true)
+            guard let next = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") else {return}
+            present(next, animated: true)
+            print("logout")
+
+        default:
+            print("default")
+            break
+        }
+    }
     
     // MARK: Variables
     
@@ -47,7 +90,6 @@ class MainpageViewController: UIViewController {
                 for li in list {
                     let task = Task(dict: li)
                     self.tasksList.append(task)
-                    print("TaskAppended")
                 }
                 self.tableView.reloadData()
                 print("TableRefreshed")
@@ -84,4 +126,33 @@ extension MainpageViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasksList.count
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        let index = indexPath.row
+        vc?.task_title = tasksList[index].getTaskName
+        vc?.task_description  = tasksList[index].getDescription
+        vc?.task_location  = tasksList[index].getAddr1
+        vc?.task_complete_date  = tasksList[index].getDateOfCompletion
+        vc?.task_creator  = tasksList[index].getAuthorFK
+        vc?.task_reward  = tasksList[index].getReward
+        //NavMainController
+         self.navigationController?.pushViewController(vc!, animated: true)
+         //present(vc!, animated: true, completion: nil)
+    }
+    
+}
+
+extension MainpageViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = true
+        return transition
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
+    }
+    
+    
+    
 }

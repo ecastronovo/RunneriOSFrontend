@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 
+
 class TaskMainTableViewCell: UITableViewCell {
     
     // MARK: IB Outlets
@@ -18,6 +19,9 @@ class TaskMainTableViewCell: UITableViewCell {
     @IBOutlet weak var taskDescription: UITextView!
     @IBOutlet weak var taskTitle: UILabel!
     @IBOutlet weak var taskCost: UILabel!
+    
+    let urlKey = "https://res.cloudinary.com/danishs/image/upload/v1555910140/redapple_sokanm.png"
+    
     
     
     
@@ -48,6 +52,26 @@ class TaskMainTableViewCell: UITableViewCell {
         self.taskDescription.text = data.getDescription
         self.taskCost.text = "$ \(data.getReward)"
         self.taskProfileImage.image = UIImage(named: "linkedinPhoto")
+        
+        let url = URL(string: urlKey)
+    
+        if let url = URL(string: urlKey){
+            
+            do {
+                let data = try Data(contentsOf: url)
+                self.taskProfileImage.image = UIImage(data: data)
+                
+            }catch let err {
+                print(" Error : \(err.localizedDescription)")
+            }
+            
+            
+        }
+            
+        
+        
+        
+        
         
 
         

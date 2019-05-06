@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
     private func goToMain(){
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainpageViewController") as? MainpageViewController else {
+        guard let destinationViewController = mainStoryBoard.instantiateViewController(withIdentifier: "NavMainController") as? UINavigationController else {
             return
         }
         present(destinationViewController, animated: true, completion: nil)

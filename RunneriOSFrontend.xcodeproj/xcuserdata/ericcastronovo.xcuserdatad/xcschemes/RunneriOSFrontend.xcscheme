@@ -37,11 +37,6 @@
                BlueprintName = "RunneriOSFrontendTests"
                ReferencedContainer = "container:RunneriOSFrontend.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "NetworkTests/testBackend()">
-               </Test>
-            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
