@@ -11,8 +11,30 @@ import Alamofire
 
 class MainpageViewController: UIViewController {
     let transition = SlideTransition()
+    var toggleTaskList: Bool = false
 
     @IBOutlet weak var tableView: UITableView!
+  
+    @IBAction func segmentControl(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            print("case zero")
+            toggleTaskList = false
+            self.tableView.reloadData()
+            
+        case 1:
+            print("case one")
+            toggleTaskList = true
+            self.tableView.reloadData()
+            
+            
+        default:
+            break
+        }
+        
+    }
+    
     @IBAction func didTapMenu(_ sender: UIButton) {
         guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {return}
             menuViewController.didTapMenuType = {menuType in
@@ -60,12 +82,22 @@ class MainpageViewController: UIViewController {
     
     var currentTask: Task!
     var tasksList = [Task]()
+    var myTasksList = [Task]()
+    var myTasksRunning = [Task]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         callDelegates()
         fetchTasks()
+        
+//        let table: UITableViewController = UITableViewController()
+//        let tableView: UITableView = UITableView()
+//        tableView.frame = CGRect(x: 10, y: 10, width: 100, height: 500)
+//        tableView.dataSource = table
+//        tableView.delegate = table
+//
+//        self.view.addSubview(tableView)
 
         // Do any additional setup after loading the view.
     }
@@ -88,11 +120,21 @@ class MainpageViewController: UIViewController {
             if let list = result.value as? [Dictionary<String, AnyObject>]{
                 print(list.count)
                 for li in list {
+                    if let ownerID = li["AuthorFK"] as? Int {
+                        if ownerID == userID{
+                            let mytask = Task(dict: li)
+                            self.myTasksList.append(mytask)
+                        }
+                    }
                     let task = Task(dict: li)
                     self.tasksList.append(task)
                 }
+                
                 self.tableView.reloadData()
                 print("TableRefreshed")
+                print(userID)
+                print(authToken)
+                print(self.myTasksList)
             }
         }
     }
@@ -118,17 +160,34 @@ extension MainpageViewController:UITableViewDelegate, UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskMainCell") as! TaskMainTableViewCell
         
-        cell.populateCell(data: tasksList[indexPath.row] )
-        return cell
+        if toggleTaskList == true{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TaskMainCell") as! TaskMainTableViewCell
+            
+            cell.populateCell(data: myTasksList[indexPath.row] )
+            
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TaskMainCell") as! TaskMainTableViewCell
+            //if matches ur id then do not show
+            
+            
+            
+            cell.populateCell(data: tasksList[indexPath.row] )
+            return cell
+        }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if toggleTaskList == true{
+            return myTasksList.count
+        }
         return tasksList.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
         let index = indexPath.row
+        vc?.task_ID = tasksList[index].getID
         vc?.task_title = tasksList[index].getTaskName
         vc?.task_description  = tasksList[index].getDescription
         vc?.task_location  = tasksList[index].getAddr1
@@ -153,7 +212,4 @@ extension MainpageViewController: UIViewControllerTransitioningDelegate {
         transition.isPresenting = false
         return transition
     }
-    
-    
-    
 }

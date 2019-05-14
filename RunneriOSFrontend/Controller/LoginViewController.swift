@@ -9,6 +9,10 @@
 import UIKit
 import Alamofire
 
+
+var userID = 0
+var authToken:Int = 0
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var logo: UIImageView!
@@ -44,12 +48,20 @@ class LoginViewController: UIViewController {
         Alamofire.request("http://localhost:8000/api-token-auth/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { (response) in
                 print(response)
-                 //print(response.response!.statusCode)
-//                responseCode = response.response!.statusCode
-//                print(responseCode)
-                let result = response.result
                 let responseCode = (response.response!.statusCode)
                 if responseCode == 200 {
+                    let result = response.result
+                    //print(result.value)
+                    if let list = result.value as? Dictionary<String, AnyObject>{
+                        print(list)
+                        if let id =  list["id"] as? Int{
+                            userID = id
+                        }
+                        if let token =  list["token"] as? Int{
+                            //token issues
+                            authToken = token
+                        }
+                    }
                     print("Going to Main")
                     self.goToMain()
                 }
@@ -88,8 +100,6 @@ class LoginViewController: UIViewController {
             
             self.present(alertController, animated: true, completion: nil)
         }
-        
-        
         
         return true
     }

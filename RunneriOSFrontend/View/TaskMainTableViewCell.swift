@@ -52,6 +52,10 @@ class TaskMainTableViewCell: UITableViewCell {
         self.taskDescription.text = data.getDescription
         self.taskCost.text = "$ \(data.getReward)"
         self.taskProfileImage.image = UIImage(named: "linkedinPhoto")
+        //self.taskDescription.setContentOffset(.zero, animated: true)
+        //trying to change where the scroll is positioned
+        //self.taskDescription.scrollRangeToVisible((location:0, length:0))
+        
         
         let url = URL(string: urlKey)
     

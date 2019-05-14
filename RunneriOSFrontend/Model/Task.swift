@@ -11,7 +11,7 @@ import UIKit
 class Task {
     
     // MARK: Properties
-
+    private var taskID: Int!
     private var taskName: String!
     private var description: String!
     private var reward: Double!
@@ -63,6 +63,9 @@ class Task {
     
     init(dict: Dictionary<String, AnyObject>) {
         //print("Task Initializer Called")
+        if let taskid = dict["id"] as? Int {
+            self.taskID = taskid
+        }
         if let taskName = dict["TaskTitle"] as? String {
             self.taskName = taskName
         }
@@ -112,6 +115,14 @@ class Task {
             self.updatedTS = updatedTS
         }
         
+    }
+    
+    var getID: Int {
+        if taskID == nil{
+            taskID = -1
+        }
+        print(Int(taskID))
+        return taskID
     }
     
     var getTaskName: String {

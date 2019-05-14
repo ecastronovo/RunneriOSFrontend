@@ -22,10 +22,7 @@ class DetailViewController: UIViewController {
     
     var currentTask: Task!
     
-    
-    
-    
-    
+    var task_ID: Int!
     var task_title: String?
     var task_description: String?
     var task_location: String?
@@ -52,9 +49,8 @@ class DetailViewController: UIViewController {
         ]
         
         //runner fk and Taskstatus to change
-        
-        
-        Alamofire.request("http://127.0.0.1:8000/task/", method: .put, parameters: parameters, encoding: JSONEncoding.default)
+    
+        Alamofire.request("http://127.0.0.1:8000/task/\(Int(task_ID))/", method: .put, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { (response) in
                 print(response)
                 print(response.response!.statusCode)
@@ -62,6 +58,30 @@ class DetailViewController: UIViewController {
                 //                print(responseCode)
                 let result = response.result
                 // TODO: On completion handler
+                
+                if response.response!.statusCode == 200{
+                    let alertController = UIAlertController(title: "Task Approved", message:
+                        "You are now running Task: \(self.task_title!)", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { action in
+                        self.navigationController?.popViewController(animated: true)
+                    }))
+                    
+//                    {
+//                        self.navigationController?.popViewController(animated: true)
+//                    }
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+                else {
+                    let alertController = UIAlertController(title: "Task Denied", message:
+                        "You cannot run this task", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    //dismiss(animated: true)
+                }
         }
         
         return true

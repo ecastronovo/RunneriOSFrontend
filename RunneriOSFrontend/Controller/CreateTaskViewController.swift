@@ -81,7 +81,7 @@ class CreateTaskViewController: UIViewController {
             "PostalCode" : "\(postalCodeField.text!)",
             "TaskType": "Moving",
             "TaskStatus": "Available",
-            "AuthorFK": "7"
+            "AuthorFK": "\(userID)"
         ]
         
         Alamofire.request("http://127.0.0.1:8000/task/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
