@@ -10,10 +10,10 @@
 		9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29D225A7068003AAEF8 /* LoginViewController.swift */; };
 		9510A2A0225A725F003AAEF8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510A29F225A725F003AAEF8 /* RegisterViewController.swift */; };
 		9522D0282263D83D00B00CF9 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9522D0272263D83D00B00CF9 /* LightButton.swift */; };
-		953E45BC2264EA360026A3C4 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E45BB2264EA360026A3C4 /* MainTableViewController.swift */; };
 		953E45BE2264EC2B0026A3C4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E45BD2264EC2B0026A3C4 /* Task.swift */; };
 		955DFC02226E49FA00C9ED85 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DFC01226E49FA00C9ED85 /* NetworkTests.swift */; };
 		9572C805225ADD250071B3DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9572C804225ADD250071B3DE /* MainViewController.swift */; };
+		958C57CF228B6AB20033ADB4 /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C57CE228B6AB20033ADB4 /* MyTasksViewController.swift */; };
 		959C1243225ABB9600CCCDA9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */; };
 		95A595CF226970FF00EC4AEE /* MainpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A595CE226970FF00EC4AEE /* MainpageViewController.swift */; };
 		95A595D12269731900EC4AEE /* TaskMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A595D02269731900EC4AEE /* TaskMainTableViewCell.swift */; };
@@ -61,10 +61,11 @@
 		9510A29D225A7068003AAEF8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9510A29F225A725F003AAEF8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9522D0272263D83D00B00CF9 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
-		953E45BB2264EA360026A3C4 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		953E45BD2264EC2B0026A3C4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		955DFC01226E49FA00C9ED85 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		9572C804225ADD250071B3DE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		958C57CE228B6AB20033ADB4 /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
+		958C57D1228B6E8D0033ADB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/MyTaskTableViewCell.swift; sourceTree = "<group>"; };
 		959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95A595CE226970FF00EC4AEE /* MainpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainpageViewController.swift; sourceTree = "<group>"; };
 		95A595D02269731900EC4AEE /* TaskMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMainTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,10 +135,10 @@
 		950CCFAD225C3F76000D6A25 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				953E45BB2264EA360026A3C4 /* MainTableViewController.swift */,
 				95E3A3142262F7E100877538 /* CreateTaskViewController.swift */,
 				9510A29D225A7068003AAEF8 /* LoginViewController.swift */,
 				9510A29F225A725F003AAEF8 /* RegisterViewController.swift */,
+				958C57CE228B6AB20033ADB4 /* MyTasksViewController.swift */,
 				959C1242225ABB9600CCCDA9 /* ProfileViewController.swift */,
 				9572C804225ADD250071B3DE /* MainViewController.swift */,
 				95D70B10225FDCEC00A3705C /* TaskTableViewCell.swift */,
@@ -156,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				95A595D02269731900EC4AEE /* TaskMainTableViewCell.swift */,
+				958C57D0228B6E8D0033ADB4 /* MyTaskTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -414,7 +416,7 @@
 		};
 		DE3EEDC7139396BA6F8FF3E0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -434,7 +436,7 @@
 		};
 		F97A4020222AAF5697DBEC43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -460,8 +462,8 @@
 				9522D0282263D83D00B00CF9 /* LightButton.swift in Sources */,
 				95A595D12269731900EC4AEE /* TaskMainTableViewCell.swift in Sources */,
 				95C782712280B01400AD9DBD /* SlideTransition.swift in Sources */,
+				958C57CF228B6AB20033ADB4 /* MyTasksViewController.swift in Sources */,
 				95A595CF226970FF00EC4AEE /* MainpageViewController.swift in Sources */,
-				953E45BC2264EA360026A3C4 /* MainTableViewController.swift in Sources */,
 				95EBE91E2263AE3F0046CD51 /* DarkButton.swift in Sources */,
 				95D70B11225FDCEC00A3705C /* TaskTableViewCell.swift in Sources */,
 				9510A29E225A7068003AAEF8 /* LoginViewController.swift in Sources */,
@@ -510,6 +512,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		958C57D0228B6E8D0033ADB4 /* MyTaskTableViewCell.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				958C57D1228B6E8D0033ADB4 /* Base */,
+			);
+			name = MyTaskTableViewCell.swift;
+			sourceTree = "<group>";
+		};
 		95BC70A5225309C900D3C520 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -648,7 +658,9 @@
 			baseConfigurationReference = 2AAC4AA9135435F16BD22531 /* Pods-RunneriOSFrontend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFD66UXZM2;
 				INFOPLIST_FILE = RunneriOSFrontend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,6 +668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ec.RunneriOSFrontend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -666,7 +679,9 @@
 			baseConfigurationReference = 47802E4F9EF19B2FE60951EB /* Pods-RunneriOSFrontend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFD66UXZM2;
 				INFOPLIST_FILE = RunneriOSFrontend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,6 +689,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ec.RunneriOSFrontend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

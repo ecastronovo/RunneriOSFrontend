@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 
-
 var userID = 0
 var authToken:Int = 0
 

@@ -65,7 +65,7 @@ class DetailViewController: UIViewController {
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: { action in
                         self.navigationController?.popViewController(animated: true)
                     }))
-                    
+                    // When we go back to main, change toggle to 1
 //                    {
 //                        self.navigationController?.popViewController(animated: true)
 //                    }
