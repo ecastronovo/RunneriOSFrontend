@@ -24,7 +24,7 @@ class Task {
     private var postalCode: String!
     private var taskType: String!
     private var taskStatus: String!
-    private var authorFK: String!
+    private var authorFK: Int!
     private var runnerFK: String!
     private var createdTS: String!
     private var updatedTS: String!
@@ -102,8 +102,10 @@ class Task {
         if let taskStatus = dict["TaskStatus"] as? String {
             self.taskStatus = taskStatus
         }
-        if let authorFK = dict["AuthorFK"] as? String {
+        if let authorFK = dict["AuthorFK"] as? Int {
             self.authorFK = authorFK
+            print("This is the author Key:")
+            print(authorFK)
         }
         if let runnerFK = dict["RunnerFK"] as? String {
             self.runnerFK = runnerFK
@@ -197,10 +199,14 @@ class Task {
         }
         return taskStatus
     }
-    var getAuthorFK: String {
-        if authorFK == nil {
-            authorFK = ""
+    var getAuthorFK: Int {
+        print("This is the returning AuthorFK:")
+        print(authorFK)
+       if authorFK == nil {
+            authorFK = 1
         }
+        print("This is the returning AuthorFK:")
+        print(authorFK)
         return authorFK
     }
     var getRunnerFK: String {

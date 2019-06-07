@@ -120,7 +120,6 @@ class ProfileViewController: UIViewController {
                 print(response.response!.statusCode)
                 let responseCode = response.response!.statusCode
                 print(responseCode)
-                let result = response.result
                 print(response.response!.statusCode)
                 if response.response!.statusCode >= 200 && response.response!.statusCode < 300 {
                     print("User Information Successfully changed")
@@ -203,15 +202,5 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -1,28 +1,49 @@
 //
-//  DetailViewController.swift
+//  RunnerDetailViewController.swift
 //  RunneriOSFrontend
 //
-//  Created by Eric Castronovo on 5/5/19.
+//  Created by Eric Castronovo on 6/6/19.
 //  Copyright © 2019 Eric Castronovo. All rights reserved.
 //
 
 import UIKit
 import Alamofire
 
-class DetailViewController: UIViewController {
-    @IBOutlet weak var taskTitle: UILabel!
+class RunnerDetailViewController: UIViewController {
+    
+    @IBOutlet weak var tastTitle: UILabel!
     @IBOutlet weak var taskDescription: UILabel!
     @IBOutlet weak var taskLocation: UILabel!
     @IBOutlet weak var taskCompleteDate: UILabel!
     @IBOutlet weak var taskCreator: UILabel!
     @IBOutlet weak var taskReward: UILabel!
-    @IBAction func taskRun(_ sender: UIButton) {
-        runATask()
+    @IBAction func taskComplete(_ sender: Any) {
+        completeATask()
     }
-    
-    @IBAction func backTap(_ sender: Any) {
+    @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tastTitle.text = task_title
+        taskDescription.text = task_description
+        taskLocation.text = taskLocation.text! + task_location!
+        taskCompleteDate.text = taskCompleteDate.text! + task_complete_date!
+        taskReward.text! += String(task_reward!)
+        taskCreator.text! += task_creator!
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     var currentTask: Task!
     
     var task_ID: Int!
@@ -33,7 +54,7 @@ class DetailViewController: UIViewController {
     var task_creator: String?
     var task_reward: Double?
     
-    private func runATask() -> Bool {
+    private func completeATask() -> Bool {
         
         let parameters: Parameters = [
             "TaskTitle": currentTask.getTaskName,
@@ -46,13 +67,11 @@ class DetailViewController: UIViewController {
             "State" : currentTask.getState,
             "PostalCode" : currentTask.getPostalCode,
             "TaskType": "Moving",
-            "TaskStatus": "Running",
+            "TaskStatus": "Completed",
             "RunnerFK": "\(userID)",
             "AuthorFK": currentTask.getAuthorFK
         ]
         
-        //runner fk and Taskstatus to change
-    
         Alamofire.request("http://127.0.0.1:8000/task/\(Int(task_ID))/", method: .put, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { (response) in
                 print(response)
@@ -69,9 +88,9 @@ class DetailViewController: UIViewController {
                         self.navigationController?.popViewController(animated: true)
                     }))
                     // When we go back to main, change toggle to 1
-//                    {
-//                        self.navigationController?.popViewController(animated: true)
-//                    }
+                    //                    {
+                    //                        self.navigationController?.popViewController(animated: true)
+                    //                    }
                     
                     self.present(alertController, animated: true, completion: nil)
                     
@@ -88,29 +107,7 @@ class DetailViewController: UIViewController {
         }
         
         return true
-        
     }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        taskTitle.text = task_title
-        taskDescription.text = task_description
-        taskLocation.text = taskLocation.text! + task_location!
-        taskCompleteDate.text = taskCompleteDate.text! + task_complete_date!
-        taskReward.text! += String(task_reward!)
-        taskCreator.text! += task_creator!
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  
 
 }

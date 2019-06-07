@@ -6,12 +6,11 @@
 //  Copyright © 2019 Eric Castronovo. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class MyTaskTableViewCell: UITableViewCell {
-    
+class RunCell: UITableViewCell {
 
-    
     // MARK: IB Outlets
     
     // MARK: Methods

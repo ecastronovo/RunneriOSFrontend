@@ -66,8 +66,6 @@ class MainpageViewController: UIViewController {
             present(next, animated: true)
             print("mytasks")
         case .logout:
-//            guard let next = storyboard?.instantiateViewController(withIdentifier: "next") else {return}
-//            present(next, animated: true)
             guard let next = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") else {return}
             present(next, animated: true)
             print("logout")
@@ -83,7 +81,8 @@ class MainpageViewController: UIViewController {
     var currentTask: Task!
     var tasksList = [Task]()
     var myTasksList = [Task]()
-    var myTasksRunning = [Task]()
+    //var myTasksRunning = [Task]()
+    
     
     
     override func viewDidLoad() {
@@ -126,8 +125,18 @@ class MainpageViewController: UIViewController {
                             self.myTasksList.append(mytask)
                         }
                     }
-                    let task = Task(dict: li)
-                    self.tasksList.append(task)
+                    if let status = li["TaskStatus"] as? String{
+                        if status == "Running"{
+                            continue
+                        }
+                        if status == "Completed"{
+                            continue
+                        }
+                        else {
+                            let task = Task(dict: li)
+                            self.tasksList.append(task)
+                        }
+                    }
                 }
                 
                 self.tableView.reloadData()
@@ -192,12 +201,12 @@ extension MainpageViewController:UITableViewDelegate, UITableViewDataSource{
         vc?.task_description  = tasksList[index].getDescription
         vc?.task_location  = tasksList[index].getAddr1
         vc?.task_complete_date  = tasksList[index].getDateOfCompletion
-        vc?.task_creator  = tasksList[index].getAuthorFK
+        vc?.task_creator  = String(tasksList[index].getAuthorFK)
         vc?.task_reward  = tasksList[index].getReward
         vc?.currentTask = tasksList[index]
         //NavMainController
-         self.navigationController?.pushViewController(vc!, animated: true)
-         //present(vc!, animated: true, completion: nil)
+        // self.navigationController?.pushViewController(vc!, animated: true)
+        present(vc!, animated: true, completion: nil)
     }
     
 }
