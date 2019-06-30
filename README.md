@@ -1,5 +1,7 @@
 # RunneriOSFrontend
 iOS Application build using Swift. 
+Networking from Alamofire.
+Dependency Manager from CocoaPods.
 
 The application Implements:
 * Launch
